@@ -24,10 +24,10 @@ function(input, output) {
       ## Plot the different binom dist based on user input
       if(input$dis=="binom"){
        
-           if(input$trials==50){d <- rbinom(1000,50,.5)}
+           if(input$trials==5){d <- rbinom(1000,5,.5)}
+           else if(input$trials==50){d <- rbinom(1000,25,.5)}
            else if(input$trials==100){d <- rbinom(1000,100,.5)}
-           else if(input$trials==500){d <- rbinom(1000,500,.5)}
-           else { d<- rbinom(1000,1000,.5)
+           else {d <- rbinom(1000,500,.5)
               } 
         hist(d,prob=TRUE,lwd=2,col="dodgerblue",main="Your Distribution")
         lines(density(d), lwd=2,col="gold1") }

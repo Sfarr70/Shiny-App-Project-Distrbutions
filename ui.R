@@ -14,6 +14,12 @@ fluidPage(
 
     # Input for type of randoms to generate
          sidebarPanel(
+           
+           helpText("Choose the type of distribution",
+                    "you'd like to see.",
+                    "If Binomial is chosen,",
+                    "you will get options for trial size."),
+           
             selectInput("dis", "Distribution:",  
                   choices = c("Normal" = "norm",
                        "Exponential" = "exp",
@@ -23,10 +29,10 @@ fluidPage(
       ## Show only if Binomial i chosen
           conditionalPanel(condition="input.dis == 'binom'",
                selectInput("trials","Size of Trials",
-                     c(50,100,500,1000))),
+                     c(5,25,100,500))),
                
-            position="left"),             
-       
+            position="left"), 
+  
        # Show a plot of the generated distribution
         mainPanel(plotOutput("distPlot"),
                   position="right")
