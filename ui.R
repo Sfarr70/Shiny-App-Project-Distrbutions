@@ -29,7 +29,7 @@ fluidPage(
       ## Show only if Binomial i chosen
           conditionalPanel(condition="input.dis == 'binom'",
                selectInput("trials","Size of Trials",
-                     c(5,25,100,500))),
+                     c(5,50,100,500))),
                
             position="left"), 
   

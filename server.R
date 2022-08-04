@@ -25,7 +25,7 @@ function(input, output) {
       if(input$dis=="binom"){
        
            if(input$trials==5){d <- rbinom(1000,5,.5)}
-           else if(input$trials==50){d <- rbinom(1000,25,.5)}
+           else if(input$trials==50){d <- rbinom(1000,50,.5)}
            else if(input$trials==100){d <- rbinom(1000,100,.5)}
            else {d <- rbinom(1000,500,.5)
               } 
